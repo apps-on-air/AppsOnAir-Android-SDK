@@ -10,9 +10,10 @@ android {
         minSdk 21
         targetSdk 30
         versionCode 1
-        versionName "1.0.6"
-        android.buildTypes.each { type ->
-            type.buildConfigField 'String', 'Base_URL', API_URL
+        versionName "1.0.7"
+        android {
+            buildConfigField 'String', 'Base_URL', API_URL
+            buildConfigField 'String', 'CDN_BASE_URL', CDN_URL
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
